@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITLE}} – Coach Mic Blog</title>
+    <style>
+        body { font-family: system-ui, sans-serif; background: #f9f9f9; line-height: 1.8; }
+        header { background: linear-gradient(135deg, #1A3CA8 0%, #0D2270 100%); color: white; padding: 2rem; }
+        .article-header { max-width: 800px; margin: 0 auto; padding: 2rem; background: white; }
+        .article-header h1 { font-size: 2rem; color: #1A3CA8; margin-bottom: 1rem; }
+        .article-content { max-width: 800px; margin: 0 auto; padding: 2rem; background: white; }
+        .article-content h2 { font-size: 1.5rem; margin: 2rem 0 1rem 0; color: #1A3CA8; }
+        footer { background: #f0f0f0; padding: 2rem; text-align: center; color: #666; }
+    </style>
+</head>
+<body>
+    <header><a href="/blog/" style="color: white; text-decoration: none;">← Zurück zum Blog</a></header>
+    <div class="article-header">
+        <span style="color: #666;">{{DATE}} • {{CATEGORY}}</span>
+        <h1>{{TITLE}}</h1>
+        <p>{{EXCERPT}}</p>
+    </div>
+    <article class="article-content">
+        {{CONTENT}}
+    </article>
+    <footer><p>© 2026 Coach Mic – Michael Otten</p></footer>
+</body>
+</html>
