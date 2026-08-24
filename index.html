@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Coach Mic – Praxisnahe Ratgeber für Jugendfußballtrainer</title>
+<title>Coach Mic – Praxisnahe Ratgeber für Jugensfußballtrainer</title>
 <meta name="description" content="Coach Mic: praxisnahe Ratgeber-Bücher für Jugendfußballtrainer von Michael Otten, aktivem Jugendtrainer beim SV Frömmersbach 1948.">
 <style>
 
@@ -20,7 +20,9 @@
   }
 
   *{ box-sizing: border-box; }
+
   html{ scroll-behavior: smooth; }
+
   body{
     margin: 0;
     font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
@@ -39,6 +41,7 @@
   }
 
   a{ color: inherit; }
+
   img{ max-width: 100%; display: block; }
 
   .wrap{
@@ -70,6 +73,8 @@
     border-radius: 999px;
     margin-bottom: 18px;
   }
+
+  /* ---------- HEADER ---------- */
 
   header.site-header{
     position: sticky;
@@ -127,6 +132,8 @@
     nav.main-nav ul{ gap: 16px; flex-wrap: wrap; justify-content: flex-end; }
   }
 
+  /* ---------- PITCH MOTIF ---------- */
+
   .pitch-motif{
     position: absolute;
     inset: 0;
@@ -138,6 +145,8 @@
   }
 
   .pitch-motif svg{ width: 100%; max-width: 640px; height: auto; }
+
+  /* ---------- HERO ---------- */
 
   .hero{
     position: relative;
@@ -207,6 +216,8 @@
     cursor: not-allowed;
   }
 
+  /* ---------- SECTIONS ---------- */
+
   section{ padding: 78px 0; position: relative; }
 
   .section-head{ text-align: center; max-width: 640px; margin: 0 auto 48px; }
@@ -216,8 +227,7 @@
   .divider{
     border: none;
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--panel-border) 20%, var(--panel-border) 80%, transparent);
-    margin: 0;
+    background: linear-gradient(90deg, transparent, rgba(149,218,86,0.25) 20%, rgba(149,218,86,0.25) 80%, transparent);
   }
 
   .book-grid{
@@ -460,6 +470,7 @@
 
     <div class="book-grid">
 
+      <!-- Buch 1 -->
       <article class="book-card">
         <span class="badge live">Band 1 der Reihe · Live auf Amazon</span>
         <img class="book-cover" src="covers/book1_cover.png" alt="Cover: Für alle, die mehr sein wollen als ein Trainer">
@@ -478,6 +489,7 @@
         </div>
       </article>
 
+      <!-- Buch 2 -->
       <article class="book-card">
         <span class="badge live">Band 3 der Reihe · Live auf Amazon</span>
         <img class="book-cover" src="covers/book2_cover.png" alt="Cover: Gemeinsam am Spielfeldrand">
@@ -496,6 +508,7 @@
         </div>
       </article>
 
+      <!-- Buch 3 -->
       <article class="book-card">
         <span class="badge live">Band 2 der Reihe · Live auf Amazon</span>
         <img class="book-cover" src="covers/book3_cover.png" alt="Cover: Entwicklung statt Zufall">
@@ -514,6 +527,7 @@
         </div>
       </article>
 
+      <!-- Buch 4 -->
       <article class="book-card">
         <span class="badge live">Band 4 der Reihe · Live auf Amazon</span>
         <img class="book-cover" src="covers/book4_cover.png" alt="Cover: Kinderfußball neu denken">
@@ -532,6 +546,7 @@
         </div>
       </article>
 
+      <!-- Buch 5 -->
       <article class="book-card">
         <span class="badge live">Band 6 der Reihe · Live auf Amazon</span>
         <img class="book-cover" src="covers/book5_cover.png" alt="Cover: Mehr Ruhe am Spielfeldrand">
@@ -550,6 +565,7 @@
         </div>
       </article>
 
+      <!-- Buch 6 -->
       <article class="book-card">
         <span class="badge live">Band 5 der Reihe · Live auf Amazon</span>
         <img class="book-cover" src="covers/book6_cover.png" alt="Cover: Jugendcoaching mit Wirkung">
@@ -609,7 +625,7 @@
 <hr class="divider">
 
 <section id="autor" class="author-section">
-  <div class="wrap" style="display:flex; gap:48px; align-items:flex-start;">
+  <div class="wrap">
     <div class="author-photo-placeholder">Autorenfoto<br>folgt</div>
     <div>
       <span class="role">Über den Autor</span>
@@ -640,7 +656,6 @@
     </div>
     
     <div id="blog-posts" class="blog-grid">
-      <!-- Posts werden hier geladen -->
     </div>
   </div>
 </section>
@@ -726,7 +741,7 @@ async function loadBlogPosts() {
       container.appendChild(card);
     });
   } catch (error) {
-    console.error('Blog konnte nicht geladen werden:', error);
+    console.log('Blog konnte nicht geladen werden');
   }
 }
 
